@@ -6,7 +6,7 @@ var bodyParser = require("body-parser")
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-var port = 3000;
+var port = process.env.PORT || 8000;
 
 // const adminNamespace = io.of('/admin');
 // adminNamespace.to('level1').emit('an event', {some: 'data'});
